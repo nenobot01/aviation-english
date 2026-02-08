@@ -209,13 +209,18 @@ export default function Home() {
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm text-[var(--color-navy-300)]">
-            <a href="#features" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">Features</a>
-            <a href="#pricing" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">Pricing</a>
-            <a href="#faq" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">FAQ</a>
+            <a href="/courses" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">Courses</a>
+            <a href="/pricing" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">Pricing</a>
+            <a href="/about" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">About</a>
+            <a href="/faq" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">FAQ</a>
+            <a href="/contact" className="hover:text-[var(--color-sky-accent)] transition-colors cursor-pointer">Contact</a>
           </div>
-          <button className="bg-[var(--color-sky-accent)] text-[var(--color-navy-950)] px-5 py-2 rounded-full text-sm font-semibold hover:brightness-110 transition cursor-pointer">
-            Get Started
-          </button>
+          <div className="hidden md:flex items-center gap-3">
+            <a href="/auth/login" className="text-[var(--color-navy-200)] font-medium text-sm px-4 py-2 rounded-lg hover:bg-white/[0.04] transition-colors cursor-pointer">Sign In</a>
+            <a href="/auth/signup" className="bg-[var(--color-sky-accent)] text-[var(--color-navy-950)] px-5 py-2 rounded-full text-sm font-semibold hover:brightness-110 transition cursor-pointer">
+              Start Free Trial
+            </a>
+          </div>
         </div>
       </nav>
 
