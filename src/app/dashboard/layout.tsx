@@ -2,15 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Radio, Headphones, AlertTriangle, Gauge, BarChart3, User, Plane, LogOut, Menu, X } from "lucide-react";
+import { LayoutDashboard, Radio, Headphones, AlertTriangle, GraduationCap, BarChart3, User, Plane, LogOut, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const sidebarLinks = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/dashboard/phraseology", label: "Phraseology", icon: Radio },
+  { href: "/dashboard/radiotelephony", label: "Radiotelephony", icon: Radio },
   { href: "/dashboard/listening", label: "Listening", icon: Headphones },
-  { href: "/dashboard/non-routine", label: "Non-Routine", icon: AlertTriangle },
-  { href: "/dashboard/exam-prep", label: "ICAO Prep", icon: Gauge },
+  { href: "/dashboard/emergency", label: "Emergency English", icon: AlertTriangle },
+  { href: "/dashboard/icao-prep", label: "ICAO Prep", icon: GraduationCap },
   { href: "/dashboard/progress", label: "Progress", icon: BarChart3 },
   { href: "/dashboard/profile", label: "Profile", icon: User },
 ];
@@ -28,16 +28,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-[var(--color-navy-400)]">
               <Menu className="w-5 h-5" />
             </button>
-            <Link href="/dashboard" className="flex items-center gap-2.5">
+            <Link href="/dashboard" className="flex items-center gap-2">
               <Plane className="w-6 h-6 text-[var(--color-sky-accent)]" />
-              <span className="font-bold text-white hidden sm:block">Aviation English<span className="text-[var(--color-sky-accent)]"> Pro</span></span>
+              <span className="font-semibold text-white hidden sm:block">Aviation English <span className="text-[var(--color-sky-accent)]">Pro</span></span>
             </Link>
           </div>
           <div className="flex items-center gap-3">
             <div className="hidden md:flex items-center gap-2 bg-white/[0.04] rounded-full px-3.5 py-2 border border-white/[0.06]">
-              <span className="text-xs text-[var(--color-sky-accent)] font-mono font-medium">Pro Plan</span>
+              <span className="text-xs text-[var(--color-sky-accent)] font-medium">Pro Plan</span>
             </div>
-            <Link href="/dashboard/profile" className="w-10 h-10 rounded-full bg-[var(--color-navy-700)] border border-[var(--color-navy-600)] flex items-center justify-center text-[var(--color-sky-accent)] font-mono font-semibold text-xs">
+            <Link href="/dashboard/profile" className="w-10 h-10 rounded-full bg-[var(--color-navy-800)] flex items-center justify-center text-[var(--color-navy-300)] font-semibold text-xs">
               LF
             </Link>
           </div>
@@ -51,9 +51,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <aside className="fixed left-0 top-0 bottom-0 w-[260px] bg-[var(--color-navy-900)] z-50 md:hidden overflow-y-auto">
             <div className="p-5">
               <div className="flex items-center justify-between mb-8">
-                <Link href="/dashboard" className="flex items-center gap-2.5">
+                <Link href="/dashboard" className="flex items-center gap-2">
                   <Plane className="w-6 h-6 text-[var(--color-sky-accent)]" />
-                  <span className="font-bold text-white">Aviation English<span className="text-[var(--color-sky-accent)]"> Pro</span></span>
+                  <span className="font-semibold text-white">Aviation English Pro</span>
                 </Link>
                 <button onClick={() => setMobileOpen(false)} className="text-[var(--color-navy-600)]"><X className="w-5 h-5" /></button>
               </div>
@@ -89,7 +89,7 @@ function SidebarNav({ pathname, onNavigate }: { pathname: string; onNavigate?: (
               href={link.href}
               onClick={onNavigate}
               className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-sm ${
-                isActive ? "bg-[var(--color-navy-800)] text-[var(--color-sky-accent)] font-medium" : "text-[var(--color-navy-500)] hover:text-[var(--color-navy-300)] hover:bg-[var(--color-navy-800)]/50"
+                isActive ? "bg-[var(--color-navy-800)] text-white font-medium" : "text-[var(--color-navy-500)] hover:text-[var(--color-navy-300)] hover:bg-[var(--color-navy-800)]"
               }`}
             >
               <link.icon className={`w-[17px] h-[17px] ${isActive ? "text-[var(--color-sky-accent)]" : ""}`} />

@@ -17,15 +17,15 @@ export default function LoginPage() {
     <div className="min-h-screen bg-[var(--color-navy-950)] flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center gap-2.5 mb-8">
+          <Link href="/" className="inline-flex items-center gap-2 mb-8">
             <Plane className="w-7 h-7 text-[var(--color-sky-accent)]" />
-            <span className="font-bold text-xl text-white">Aviation English<span className="text-[var(--color-sky-accent)]"> Pro</span></span>
+            <span className="font-semibold text-xl text-white">Aviation English <span className="text-[var(--color-sky-accent)]">Pro</span></span>
           </Link>
           <h1 className="text-3xl font-bold text-white mb-2">Welcome back</h1>
           <p className="text-[var(--color-navy-400)] text-sm">Sign in to continue your aviation English training</p>
         </div>
 
-        <div className="bg-[var(--color-navy-900)] rounded-xl border border-[var(--color-navy-800)] p-7">
+        <div className="bg-[var(--color-navy-900)] rounded-2xl border border-[var(--color-navy-800)] p-7">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="text-[var(--color-navy-300)] text-sm font-medium mb-2 block">Email</label>
@@ -37,7 +37,7 @@ export default function LoginPage() {
             <div>
               <div className="flex justify-between items-center mb-2">
                 <label className="text-[var(--color-navy-300)] text-sm font-medium">Password</label>
-                <Link href="#" className="text-[var(--color-sky-accent)] text-xs hover:brightness-110 transition">Forgot password?</Link>
+                <Link href="#" className="text-[var(--color-navy-400)] text-xs hover:text-white transition-colors">Forgot password?</Link>
               </div>
               <div className="relative">
                 <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-navy-600)]" />
@@ -46,7 +46,7 @@ export default function LoginPage() {
             </div>
             <button type="submit" disabled={loading} className="w-full bg-[var(--color-sky-accent)] text-[var(--color-navy-950)] h-12 rounded-xl font-semibold hover:brightness-110 transition disabled:opacity-50 flex items-center justify-center gap-2">
               {loading ? (
-                <><span className="w-4 h-4 border-2 border-[var(--color-navy-950)]/20 border-t-[var(--color-navy-950)] rounded-full animate-spin" /> Signing in...</>
+                <><span className="w-4 h-4 border-2 border-[var(--color-navy-800)]/20 border-t-[var(--color-navy-800)] rounded-full animate-spin" /> Signing in...</>
               ) : (
                 <>Sign In <ArrowRight className="w-4 h-4" /></>
               )}
